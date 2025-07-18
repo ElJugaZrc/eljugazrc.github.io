@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="ElJugaZrc">
+    <meta name="description" content="A page for looking to public pianos around the world">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Public Pianos</title>
+    <!--Los links y scripts de Leaflet-->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</head>
+<body>
+    <!--Div para lo que viene siendo el mapa-->
+    <div id="map"></div>
+    <script src="mapa.js"></script>
+    <!--Divs para el botón con todas las cosas-->
+    <div class="panel_informacion" id="panel_informacion">
+        <a href="https://github.com/ElJugaZrc/public-pianos-web" class="boton_github" target="_blank" rel="noopener noreferrer">
+            <img src="images/github-mark.png" width="50px" height="50px">
+        </a>
+        <a href="https://discord.gg/WNYe33NB3g" class="boton_discord" target="_blank" rel="noopener noreferrer">
+            <img src="images/discord_icon.png" width="46px" height="46spx">
+        </a>
+        <!--Botón de información (en proceso de funcionar)-->
+        <a href="templates/faq.html" class="boton_pagina_informacion">
+            <img src="images/information_icon.png" width="44px" height="44px">
+        </a>
+        <button class="boton_cerrar_panel" id="boton_cerrar_panel">
+            <img src="images/cruz.png" width="30px" height="30px">
+            <script src="scripts/botones.js"></script>
+        </button>
+    </div>
+    <!--Div aparte para el otro botón, creo que esto está mal hecho XD-->
+    <div class="boton_info" id="boton_info">
+        <button class="boton_boton_informacion">
+            <img src="images/information_points.png" width="30px">
+            <script src="scripts/botones.js"></script>
+        </button>
+    </div>
+    <!--Div para la leyenda de colores-->
+    <div class="leyenda">
+        <table>
+            <tbody>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-green.png" style="width: 15px;"></td>
+                    <td>Piano en buenas condiciones</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png" style="width: 15px;"></td>
+                    <td>Piano con desperfectos</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png" style="width: 15px;"></td>
+                    <td>Piano en pesimas condiciones</td>
+                </tr>
+                <tr>
+                    <td><img src="images/marcadores/marker_negro.png" style="width: 15px;"></td>
+                    <td>Piano con accesibilidad reducida</td>
+                </tr>
+                <tr>
+                    <td><img src="https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-violet.png" style="width: 15px;"></td>
+                    <td>Piano temporal</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
